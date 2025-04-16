@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電卓</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14.4.0/lib/browser/math.min.js"></script>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <input type="text" id="answer" style="display:none;">
+        <div id="result" style="display:none;"></div>
+        <div id="buttons">
+          <button data-value="7" class="btn">7</button>
+          <button data-value="8" class="btn">8</button>
+          <button data-value="9" class="btn">9</button>
+          <button data-value="/" class="btn">/</button>
+
+          <button data-value="4" class="btn">4</button>
+          <button data-value="5" class="btn">5</button>
+          <button data-value="6" class="btn">6</button>
+          <button data-value="*" class="btn">*</button>
+
+          <button data-value="1" class="btn">1</button>
+          <button data-value="2" class="btn">2</button>
+          <button data-value="3" class="btn">3</button>
+          <button data-value="-" class="btn">-</button>
+
+          <button data-value="0" class="btn">0</button>
+          <button data-value="." class="btn">.</button>
+          <button id="equal-btn">=3</button>
+          <button data-value="+" class="btn">+</button>
+
+          <button id="clear-btn" class="clear">C</button>
+
+          <button class="dummy-btn"></button>
+          <div class="game-container">
+            <button class="game-btn">g</button>
+            <div class="game-selector style="display: block;">
+              <button class="multiplication-btn" data-mode="1">1の段</button>
+              <button class="multiplication-btn" data-mode="2">2の段</button>
+              <button class="multiplication-btn" data-mode="3">3の段</button>
+              <button class="multiplication-btn" data-mode="4">4の段</button>
+              <button class="multiplication-btn" data-mode="5">5の段</button>
+              <button class="multiplication-btn" data-mode="6">6の段</button>
+              <button class="multiplication-btn" data-mode="7">7の段</button>
+              <button class="multiplication-btn" data-mode="8">8の段</button>
+              <button class="multiplication-btn" data-mode="9">9の段</button>
+              <button class="multiplication-btn" data-mode="random">ランダム</button>
+              <button id="blackbeard-btn">黒ひげ危機一発</button>
+            </div>
+          </div>
+          <div class="sound-container">
+            <button class="sound-btn">♪</button>
+            <div class="sound-menu">
+              <button class="sound-menu-btn" onclick="toggleSoundMode('OFF')">OFF</button>
+              <button class="sound-menu-btn" onclick="toggleSoundMode('1')">Sound1</button>
+              <button class="sound-menu-btn" onclick="toggleSoundMode('2')">Sound2</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <audio id="clickSound1" src="/audio/click-sound1.mp3"></audio>
+    <audio id="clickSound2" src="/audio/click-sound2.mp3"></audio>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
