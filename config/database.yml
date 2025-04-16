@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: onara_calculator_production
-  username: onara_calculator
-  password: <%= ENV["ONARA_CALCULATOR_DATABASE_PASSWORD"] %>
+  adapter: mysql2
+  database: onara-calculator_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
