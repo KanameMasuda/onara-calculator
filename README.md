@@ -1,24 +1,136 @@
-# README
+# 💨 オナラ電卓 (Onara Calculator)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**ただの電卓じゃ物足りないあなたに。数字を押すたび鳴り響くオナラ音。遊び心満載の計算体験をお届けします。**
 
-Things you may want to cover:
+[👉 アプリを試す](https://onara-calculator.onrender.com)
 
-* Ruby version
+---
 
-* System dependencies
+## 🎯 開発の背景
 
-* Configuration
+エンジニアを目指す理由は人それぞれですが、  
+多くの人が「日々の不便を解決し、便利にすることで人々を幸せにしたい」と考えているのではないでしょうか。  
 
-* Database creation
+僕もその思いで、オリジナルアプリのアイデアを考えていました。  
+でも…なかなか良い案が浮かばず、正直すごく悩みました。
 
-* Database initialization
+そんな中でふと、  
+**「人を幸せにするって、課題を解決することだけじゃないかもしれない。楽しませることだって、きっと幸せにつながるはず」**  
+そう思って、このアプリを開発しました。
 
-* How to run the test suite
+ゴールが「人を幸せにすること」だと考えると、  
+**課題解決だけじゃなく、笑わせたり、驚かせたり、癒したりと、色んなアプローチ**があることに気づきました。
 
-* Services (job queues, cache servers, search engines, etc.)
+そんな発想の転換から生まれたのがこの**オナラ電卓**です。 
 
-* Deployment instructions
+👦 子どもには
 
-* ...
+オナラの音や、クイズ感覚のゲームで楽しく笑いながら学べる設計にしています。
+数字への苦手意識をなくし、自然に学習習慣が身につくきっかけになってくれたら嬉しいです。
+
+👨 大人には
+
+子どもと一緒に笑って使えるコミュニケーションツールとして。
+堅苦しくなく、遊び感覚で学びをサポートできたら嬉しいです。
+
+
+くだらないけど、クスッと笑える。そんな体験で、誰かの心が少しでも軽くなれば嬉しいです。
+
+---
+
+## 📌 概要
+
+オナラ電卓は、通常の電卓に遊び心を加えたWebアプリです。  
+音の出るボタン、黒ひげ危機一発風ゲーム、九九クイズなど、計算だけじゃないワクワクが詰まっています。
+
+---
+
+## 🔧 使用技術
+
+- **フロントエンド**: HTML / CSS / JavaScript
+- **バックエンド**: Ruby on Rails
+- **ライブラリ**: math.js（計算処理）
+- **デプロイ先**: [Render](https://render.com)
+
+---
+
+## 📁 ディレクトリ構成
+
+
+app/
+├── views/
+│   └── calculator.html.erb     # 計算機のビュー（HTML）
+├── assets/
+│   └── stylesheets/
+│       └── calculator.css     
+├── views/
+│   └── calculator.html.erb         # 電卓のメインビュー
+├── assets/
+│   ├── stylesheets/
+│   │   └── calculator.css          # 電卓用のスタイルシート
+│   └── javascripts/
+│       └── main.js                 # メインのJavaScript
+public/
+├── audio/
+│   ├── click-sound1.mp3            # ボタンクリック音
+│   └── click-sound2.mp3            # 代替クリック音
+└── js/
+├── blackbeard_game.js          # 黒ひげ危機一発ゲーム用スクリプト
+├── calculator_off.js           # 電卓オフ（静的状態）用スクリプト
+├── event_handlers.js           # 各種イベントをまとめたスクリプト
+├── game_controller.js          # 九九や黒ひげ危機一発などゲームロジックの管理
+├── main.js                     # 一般的な電卓機能のスクリプト
+├── sound_controller.js         # サウンドモード切替・再生を管理するスクリプト
+└── ui_controller.js            # UIの挙動、アニメーション、表示制御用スクリプト
+
+---
+
+## 🚀 使い方
+
+### 1. 計算する  
+数字や演算子をクリックするだけでOK！
+
+### 2. オナラモードを楽しむ  
+右下の「♪」ボタンから音のモードを切り替えられます。
+
+- Sound1：標準オナラ
+- Sound2：別バージョン
+- OFF：静音モード
+
+### 3. ゲームモードで遊ぶ  （「g」ボタン）
+- **黒ひげ危機一発風ゲーム**
+- **九九クイズ**
+
+---
+
+## 🌐 公開URL
+
+▶ [https://onara-calculator.onrender.com](https://onara-calculator.onrender.com)
+
+---
+
+## 💻 GitHub リポジトリ
+
+▶ [https://github.com/KanameMasuda/onara-calculator](https://github.com/KanameMasuda/onara-calculator)
+
+---
+
+## 📈 今後のアップデート予定
+
+- ゲーム遷移の修正等
+- ミニゲーム追加
+- モバイル対応
+
+---
+
+## 🧑‍💻 作者
+
+- **カナメ**
+- 趣味：ファッション / インテリア / 釣り / ビリヤード  
+- モットー：技術と遊び心の融合で、面白いサービスを生み出す！
+
+---
+
+## 🪪 ライセンス
+
+このプロジェクトは [MITライセンス](LICENSE) の下で公開されています。
